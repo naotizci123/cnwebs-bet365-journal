@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>简明指南 · bet365 访问与体验</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f6f8fc;
+            color: #1e2a3a;
+            line-height: 1.6;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(145deg, #0b1725 0%, #1a2f44 100%);
+            color: #f0f4fa;
+            padding: 4rem 2rem 3.6rem;
+            text-align: center;
+            position: relative;
+            box-shadow: inset 0 -3px 10px rgba(0,0,0,0.25);
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.4rem;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .hero .subhead {
+            font-size: 1.15rem;
+            font-weight: 300;
+            opacity: 0.88;
+            max-width: 660px;
+            margin: 0 auto 0.4rem;
+            line-height: 1.5;
+        }
+
+        .hero .notice-badge {
+            display: inline-block;
+            background-color: #fece51;
+            color: #1e2a3a;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 1.2rem;
+            box-shadow: 0 2px 8px rgba(254,206,81,0.3);
+        }
+
+        .hero .dot-sep {
+            display: inline-block;
+            margin: 0 8px;
+            opacity: 0.5;
+        }
+
+        /* ===== MAIN CONTAINER ===== */
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 2.8rem 1.6rem 4rem;
+        }
+
+        /* ===== SECTION ===== */
+        section {
+            margin-bottom: 3.2rem;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 500;
+            border-left: 5px solid #0f6c5f;
+            padding-left: 1rem;
+            margin-bottom: 1.4rem;
+            color: #1a2f44;
+        }
+
+        .section-title span {
+            background: linear-gradient(135deg, #0f6c5f 0%, #2b9b88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-weight: 400;
+        }
+
+        a {
+            color: #0f6c5f;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #2b9b88;
+            border-bottom-color: #2b9b88;
+        }
+
+        .text-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 20, 30, 0.06);
+            margin-bottom: 1.8rem;
+        }
+
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+        }
+
+        .advantage-item {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.6rem 1.6rem 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 20, 30, 0.06);
+            transition: transform 0.2s ease;
+        }
+
+        .advantage-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,30,40,0.08);
+        }
+
+        .advantage-item h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #0b3b3a;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .advantage-item h3 .icon {
+            width: 32px;
+            height: 32px;
+            background: #e4f0ed;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: #0f6c5f;
+        }
+
+        .advantage-item p {
+            font-size: 0.95rem;
+            color: #2d4055;
+            margin-bottom: 0;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 1.4rem 1.6rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            margin-bottom: 1rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            color: #1a2f44;
+            margin-bottom: 0.3rem;
+            font-size: 1.05rem;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            color: #3c4b5e;
+        }
+
+        .footnote-box {
+            background: #eaf2f5;
+            border-radius: 18px;
+            padding: 1.6rem 2rem;
+            margin-top: 1.6rem;
+            font-size: 0.95rem;
+            border-left: 6px solid #0f6c5f;
+        }
+
+        .footnote-box a {
+            border-bottom: 1px dashed #0f6c5f;
+        }
+
+        /* ===== BOTTOM LINKS ===== */
+        .bottom-links {
+            border-top: 1px solid #dde4ec;
+            padding-top: 2.2rem;
+            margin-top: 2rem;
+            text-align: center;
+            color: #5b6f84;
+            font-size: 0.9rem;
+        }
+
+        .bottom-links a {
+            margin: 0 0.5rem;
+            white-space: nowrap;
+        }
+
+        .bottom-links .sep {
+            color: #bccad8;
+            margin: 0 4px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero .subhead {
+                font-size: 1rem;
+            }
+            .container {
+                padding: 1.8rem 1.2rem 3rem;
+            }
+            .grid-2col {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .text-card {
+                padding: 1.4rem 1.2rem;
+            }
+            .advantage-item {
+                padding: 1.2rem;
+            }
+            .faq-item {
+                padding: 1rem 1.2rem;
+            }
+            .section-title {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 460px) {
+            .hero {
+                padding: 3rem 1.2rem 2.8rem;
+            }
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            .bottom-links a {
+                display: inline-block;
+                margin: 0.2rem 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+    <h1>bet365 · 简明体验指南</h1>
+    <p class="subhead">
+        从访问到功能，一份温和的说明与提醒<br>
+        适合希望快速了解平台特点的朋友
+    </p>
+    <div class="notice-badge">
+        <span>🔒 访问提醒</span>
+        <span class="dot-sep">·</span>
+        <span>🌐 区域网络变化时建议使用稳定连接</span>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- 说明区：从指南切入 -->
+    <section>
+        <div class="text-card">
+            <h2 class="section-title"><span>📘 快速认识 bet365</span></h2>
+            <p>
+                如果你刚刚接触 <a href="https://cnwebs-bet365.com">bet365</a>，或者希望更顺畅地使用其服务，这篇简明指南能帮你节省时间。
+                作为全球范围内使用广泛的数字平台，bet365 提供了体育赛事、娱乐游戏等多元内容。
+                但不同于一般网站，它因区域网络环境及访问策略的差异，有时需要做一些简单的准备。
+            </p>
+            <p>
+                我们为你梳理了几个关键环节：从稳定访问、账户基础设置到日常使用中的小技巧。
+                不夸大、不诱导，只提供真实可用的观察和提醒。
+            </p>
+        </div>
+    </section>
+
+    <!-- 优势区 -->
+    <section>
+        <h2 class="section-title"><span>✨ 核心体验亮点</span></h2>
+        <div class="grid-2col">
+            <div class="advantage-item">
+                <h3><span class="icon">⚡</span> 快速响应</h3>
+                <p>平台界面与数据更新及时，赛事、赔率的变动几乎实时呈现，操作反馈流畅。</p>
+            </div>
+            <div class="advantage-item">
+                <h3><span class="icon">🧭</span> 多语言与本地化</h3>
+                <p>支持中文界面及多种货币，账户设置清晰，降低不同地区用户的使用门槛。</p>
+            </div>
+            <div class="advantage-item">
+                <h3><span class="icon">📱</span> 跨设备体验</h3>
+                <p>无论桌面浏览器或移动设备，页面布局自适应，核心功能保持完整一致。</p>
+            </div>
+            <div class="advantage-item">
+                <h3><span class="icon">🔐</span> 账户安全机制</h3>
+                <p>提供双重验证、登录提醒等选项，用户可以按需调整安全等级。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <h2 class="section-title"><span>❓ 常见疑问摘要</span></h2>
+
+        <div class="faq-item">
+            <strong>访问时提示「无法连接」怎么办？</strong>
+            <p>首先确认网络是否稳定。bet365 在某些地区可能因网络限制无法直接连接，此时可尝试更换 DNS 或使用符合当地规定的网络工具。不建议使用来源不明的代理。</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>注册与语言设置复杂吗？</strong>
+            <p>注册流程仅需邮箱、手机号及基本个人信息，全程有中文指引。登录后可在设置中切换语言与显示偏好，初次使用大约十分钟即可完成基本配置。</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>如何确保账户安全？</strong>
+            <p>建议开启登录二次验证，定期修改密码，并避免在公共设备上保存登录状态。官方不会主动索要密码或验证码。</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>移动端与桌面端功能有差异吗？</strong>
+            <p>核心功能一致，仅在布局上针对触控做了优化。部分高级筛选或数据视图在桌面端显示更完整，但移动端完全可完成日常操作。</p>
+        </div>
+
+        <!-- 补充一个温和的提示卡片 -->
+        <div class="footnote-box">
+            <p>💡 <strong>一点提醒：</strong> 无论使用哪个平台，保持理性的使用习惯和清晰的自我管理都同样重要。
+            bet365 提供的始终是工具与内容，合理规划时间与投入，才能获得更好的数字体验。</p>
+        </div>
+    </section>
+
+    <!-- 底部链接区 -->
+    <div class="bottom-links">
+        <span>更多信息 · </span>
+        <a href="https://cnwebs-bet365.com">bet365</a>
+        <span class="sep">|</span>
+        <a href="#">使用指南</a>
+        <span class="sep">|</span>
+        <a href="#">帮助中心</a>
+        <span class="sep">|</span>
+        <a href="#">安全建议</a>
+        <br class="mobile-break" style="display: none;">
+        <span style="display: inline-block; margin-top: 0.8rem; opacity: 0.65;">
+            © 2025 · 简明指引 · 内容仅供信息参考
+        </span>
+    </div>
+
+</main>
+
+</body>
+</html>
